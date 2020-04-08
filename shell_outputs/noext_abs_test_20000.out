@@ -1,0 +1,66 @@
+[2020-04-08 02:18:32,489 INFO] Loading checkpoint from ../noext_abs_model/model_step_20000.pt
+[2020-04-08 02:18:34,218 INFO] loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-config.json from cache at ../temp/4dad0251492946e18ac39290fcfe91b89d370fee250efe9521476438fe8ca185.8f56353af4a709bf5ff0fbc915d8f5b42bfff892cbb6ac98c3c45f481a03c685
+[2020-04-08 02:18:34,220 INFO] Model config {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+[2020-04-08 02:18:34,351 INFO] loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-pytorch_model.bin from cache at ../temp/aa1ef1aede4482d0dbcd4d52baad8ae300e60902e88fcb0bebdec09afd232066.36ca03ab34a1a5d5fa7bc3d03d55c4fa650fed07220e2eeebc06ce58d0e9a157
+[2020-04-08 02:18:42,919 INFO] Loading test dataset from ../noext_abs_input_data/cnndm.test.0.bert.pt, number of examples: 2001
+[2020-04-08 02:18:43,054 INFO] loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at ../temp/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084
+[2020-04-08 02:37:59,055 INFO] Calculating Rouge
+2020-04-08 02:38:11,395 [MainThread  ] [INFO ]  Writing summaries.
+[2020-04-08 02:38:11,395 INFO] Writing summaries.
+2020-04-08 02:38:11,429 [MainThread  ] [INFO ]  Processing summaries. Saving system files to ../temp/tmpbbimsvpf/system and model files to ../temp/tmpbbimsvpf/model.
+[2020-04-08 02:38:11,429 INFO] Processing summaries. Saving system files to ../temp/tmpbbimsvpf/system and model files to ../temp/tmpbbimsvpf/model.
+2020-04-08 02:38:11,430 [MainThread  ] [INFO ]  Processing files in ../temp/rouge-tmp-2020-04-08-02-37-59/candidate/.
+[2020-04-08 02:38:11,430 INFO] Processing files in ../temp/rouge-tmp-2020-04-08-02-37-59/candidate/.
+2020-04-08 02:38:16,626 [MainThread  ] [INFO ]  Saved processed files to ../temp/tmpbbimsvpf/system.
+[2020-04-08 02:38:16,626 INFO] Saved processed files to ../temp/tmpbbimsvpf/system.
+2020-04-08 02:38:16,626 [MainThread  ] [INFO ]  Processing files in ../temp/rouge-tmp-2020-04-08-02-37-59/reference/.
+[2020-04-08 02:38:16,626 INFO] Processing files in ../temp/rouge-tmp-2020-04-08-02-37-59/reference/.
+2020-04-08 02:38:22,024 [MainThread  ] [INFO ]  Saved processed files to ../temp/tmpbbimsvpf/model.
+[2020-04-08 02:38:22,024 INFO] Saved processed files to ../temp/tmpbbimsvpf/model.
+2020-04-08 02:38:22,078 [MainThread  ] [INFO ]  Written ROUGE configuration to ../temp/tmpgw2plsr4/rouge_conf.xml
+[2020-04-08 02:38:22,078 INFO] Written ROUGE configuration to ../temp/tmpgw2plsr4/rouge_conf.xml
+2020-04-08 02:38:22,078 [MainThread  ] [INFO ]  Running ROUGE with command /u0/u2sethi/dev/rouge/tools/ROUGE-1.5.5/ROUGE-1.5.5.pl -e /u0/u2sethi/dev/rouge/tools/ROUGE-1.5.5/data -c 95 -m -r 1000 -n 2 -a ../temp/tmpgw2plsr4/rouge_conf.xml
+[2020-04-08 02:38:22,078 INFO] Running ROUGE with command /u0/u2sethi/dev/rouge/tools/ROUGE-1.5.5/ROUGE-1.5.5.pl -e /u0/u2sethi/dev/rouge/tools/ROUGE-1.5.5/data -c 95 -m -r 1000 -n 2 -a ../temp/tmpgw2plsr4/rouge_conf.xml
+[2020-04-08 02:38:53,573 INFO] Rouges at step 20000 
+>> ROUGE-F(1/2/3/l): 38.49/16.39/35.88
+ROUGE-R(1/2/3/l): 38.63/16.44/36.00
+
+Namespace(accum_count=1, alpha=0.95, batch_size=3000, beam_size=5, bert_data_path='../noext_abs_input_data/cnndm', beta1=0.9, beta2=0.999, block_trigram=True, dec_dropout=0.2, dec_ff_size=2048, dec_heads=8, dec_hidden_size=768, dec_layers=6, enc_dropout=0.2, enc_ff_size=512, enc_hidden_size=512, enc_layers=6, encoder='bert', ext_dropout=0.2, ext_ff_size=2048, ext_heads=8, ext_hidden_size=768, ext_layers=2, finetune_bert=True, generator_shard_size=32, gpu_ranks=[0, 1], label_smoothing=0.1, large=False, load_from_extractive='', log_file='../noext_abs_output_valid_logs/log_baseline_bert_cnndm', lr=1, lr_bert=0.002, lr_dec=0.002, max_grad_norm=0, max_length=200, max_pos=512, max_tgt_len=140, min_length=50, mode='test', model_path='../noext_abs_model', optim='adam', param_init=0, param_init_glorot=True, recall_eval=False, report_every=1, report_rouge=True, result_path='../noext_abs_output_valid_logs/result_baseline_bert_cnndm', save_checkpoint_steps=5, seed=666, sep_optim=True, share_emb=False, task='abs', temp_dir='../temp', test_all=False, test_batch_size=500, test_from='../noext_abs_model/model_step_20000.pt', test_start_from=-1, train_from='', train_steps=1000, use_bert_emb=False, use_interval=True, visible_gpus='0,1', warmup_steps=8000, warmup_steps_bert=8000, warmup_steps_dec=8000, world_size=2)
+2001
+2001
+---------------------------------------------
+1 ROUGE-1 Average_R: 0.38629 (95%-conf.int. 0.38044 - 0.39186)
+1 ROUGE-1 Average_P: 0.40951 (95%-conf.int. 0.40318 - 0.41605)
+1 ROUGE-1 Average_F: 0.38487 (95%-conf.int. 0.37977 - 0.38975)
+---------------------------------------------
+1 ROUGE-2 Average_R: 0.16438 (95%-conf.int. 0.15923 - 0.16912)
+1 ROUGE-2 Average_P: 0.17533 (95%-conf.int. 0.16969 - 0.18090)
+1 ROUGE-2 Average_F: 0.16394 (95%-conf.int. 0.15907 - 0.16852)
+---------------------------------------------
+1 ROUGE-L Average_R: 0.36003 (95%-conf.int. 0.35442 - 0.36531)
+1 ROUGE-L Average_P: 0.38189 (95%-conf.int. 0.37581 - 0.38820)
+1 ROUGE-L Average_F: 0.35882 (95%-conf.int. 0.35394 - 0.36378)
+
